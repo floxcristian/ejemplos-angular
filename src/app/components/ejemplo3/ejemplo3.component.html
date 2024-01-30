@@ -1,0 +1,14 @@
+<h2>Ejemplo 3 - ngFor avanzado</h2>
+<div
+  *ngFor="let product of products; let i = index"
+  style="border: 1px solid black"
+>
+  <app-product-card [_product]="product" [index]="i"></app-product-card>
+</div>
+<p>Productos: {{ products.length }}</p>
+<hr />
+<h5>Carro</h5>
+<div *ngFor="let productCart of cart">
+  <h3>{{ productCart.title }}</h3>
+</div>
+<p *ngIf="!cart.length">El carro esta vacío.</p>

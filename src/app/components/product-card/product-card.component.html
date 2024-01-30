@@ -1,0 +1,5 @@
+<h1>Producto {{ index + 1 }}</h1>
+<h3>{{ _product.title }}</h3>
+<p>$ {{ _product.price }}</p>
+<img [src]="_product.image" alt="" style="width: 200px; height: 200px" />
+<button (click)="addCart(_product)">Agregar al carro</button>
